@@ -1,4 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <database>
-    <element extends="task" label="Needlt" max_length="40" name="x_58872_needit_needlt" sizeclass="3" type="collection"/>
+    <element audit="true" extends="task" label="Needlt" max_length="40" name="x_58872_needit_needlt" sizeclass="4" type="collection">
+        <element label="new field 1" max_length="40" name="new_field_1" type="integer"/>
+        <element label="new field 2" max_length="40" name="new_field_2" type="integer"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="What needed" max_length="40" name="u_choice_3" type="string">
+            <choice>
+                <element label="facilities" sequence="0" value="facilities"/>
+                <element label="facilities2" sequence="1" value="facilities2"/>
+                <element label="Choice 3" sequence="2" value="Choice 3"/>
+            </choice>
+        </element>
+        <element label="New Date/Time" max_length="40" name="u_glide_date_time_1" type="glide_date_time"/>
+        <element label="New field 3" max_length="40" name="u_new_field_3" type="integer"/>
+        <element label="Requested for" mandatory="true" max_length="32" name="u_requested_for" reference="cmdb_ci_appl_dot_net" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" default="legal" label="Requested type" mandatory="true" max_length="40" name="u_requested_type" type="string">
+            <choice>
+                <element label="Human Ressources" sequence="0" value="hr"/>
+                <element label="Facilities" sequence="1" value="facilities"/>
+                <element label="Legal" sequence="2" value="legal"/>
+                <element label="your department choice" sequence="3" value="your _choice"/>
+            </choice>
+        </element>
+    </element>
 </database>
